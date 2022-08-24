@@ -14,12 +14,15 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let array = frase.split();
+  contador = 0;
+  for(let index = 0; index < frase.length; index += 1){
+    if(frase[index] == ' '){
+      contador = contador + 1;
+    }
+  }
+  let array = frase.split(' ', contador + 1);
   return array
 }
-let frase = 'vamo que vamo';
-console.log(splitSentence(frase));
-
 // Desafio 4
 function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
