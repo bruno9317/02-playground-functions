@@ -14,16 +14,12 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let array = [];
-  for(let index = 0; index < frase.length; index += 1){
-    if(frase[index] != ' '){
-      array.push(frase[index]);
-    }else{
-      array.push(', ')
-    }
-  }
-  return array;
+  let array = frase.split();
+  return array
 }
+let frase = 'vamo que vamo';
+console.log(splitSentence(frase));
+
 // Desafio 4
 function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
@@ -58,12 +54,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
   distancia1 =  cat1 - mouse;
   distancia2 =  cat2 - mouse;
+  if(distancia1 < 0){
+    distancia1 = distancia1 * (-1);
+  }
+  if(distancia2 < 0){
+    distancia2 = distancia2 * (-1);
+  }
   
   if(distancia1 < distancia2){
     return 'cat1'
   }else if(distancia1 > distancia2){
     return 'cat2'
-  }else{
+  }{
     return 'os gatos trombam e o rato foge'
   }
 }
