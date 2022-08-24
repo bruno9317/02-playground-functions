@@ -13,54 +13,21 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence(frase) {}
-
-
-
-
-
-
-
-
-
-
-
+function splitSentence(frase) {
+  let array = [];
+  for(let index = 0; index < frase.length; index += 1){
+    if(frase[index] != ' '){
+      array.push(frase[index]);
+    }else{
+      array.push(', ')
+    }
+  }
+  return array;
+}
 // Desafio 4
 function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
 }
-let teste2 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(teste2));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -69,9 +36,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = 0;
+  let contador = 0;
+  for(let index = 0; index < array.length; index += 1){
+    if(array[index] > maiorNumero){
+      maiorNumero = array[index];
+    }
+  }
+  for(let index = 0; index < array.length; index += 1){
+    if(array[index] === maiorNumero){
+      contador = contador + 1;
+    }
+  }
+  return contador
 }
+let array = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(array));
 
 // Desafio 7
 function catAndMouse() {
