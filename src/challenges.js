@@ -15,12 +15,52 @@ function calcArea(base, altura) {
 // Desafio 3
 function splitSentence(frase) {}
 
+
+
+
+
+
+
+
+
+
+
 // Desafio 4
 function concatName(array) {
-  return array[0] + ', ' + array[array.length - 1];
+  return array[array.length - 1] + ', ' + array[0];
 }
 let teste2 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(teste2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
