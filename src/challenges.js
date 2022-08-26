@@ -91,17 +91,68 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let frase2 = frase.split("", frase.length);
+  let stringFinal = '';
+  for(let index = 0; index < frase2.length; index +=1){
+    if(frase2[index] === 'a'){
+      frase2[index] = '1';
+    }else if(frase2[index] === 'e'){
+      frase2[index] = '2';
+    }else if(frase2[index] === 'i'){
+      frase2[index] = '3';
+    }else if(frase2[index] === 'o'){
+      frase2[index] = '4';
+    }else if(frase2[index] === 'u'){
+      frase2[index] = '5';
+    }
+  }
+  frase2 = frase2.join('');
+  return frase2
 }
-function decode() {
-  // seu código aqui
+let frase = 'o rato roeu a roupa i';
+console.log(encode(frase));
+
+
+
+function decode(frase) {
+  let frase2 = frase.split("", frase.length);
+  let stringFinal = '';
+  for(let index = 0; index < frase2.length; index +=1){
+    if(frase2[index] === '1'){
+      frase2[index] = 'a';
+    }else if(frase2[index] === '2'){
+      frase2[index] = 'e';
+    }else if(frase2[index] === '3'){
+      frase2[index] = 'i';
+    }else if(frase2[index] === '4'){
+      frase2[index] = 'o';
+    }else if(frase2[index] === '5'){
+      frase2[index] = 'u';
+    }
+  }
+  frase2 = frase2.join('');
+  return frase2
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  let arrayFinal = [];
+  for(let index = 0; index < array.length; index += 1){
+    if(array.length > 0){
+      arrayFinal[index] = {
+          tech: array[index],
+           name: string,
+        }
+    }else if(array.length <= 0){
+      arrayFinal = 'Vazio!';
+    }
+  }
+  return arrayFinal
 }
+// let array1 = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+// let string1 = 'Lucas';
+// console.log(techList(array1, string1));
 
 module.exports = {
   calcArea,
