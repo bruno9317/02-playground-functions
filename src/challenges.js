@@ -110,10 +110,6 @@ function encode(frase) {
   frase2 = frase2.join('');
   return frase2
 }
-let frase = 'o rato roeu a roupa i';
-console.log(encode(frase));
-
-
 
 function decode(frase) {
   let frase2 = frase.split("", frase.length);
@@ -138,21 +134,23 @@ function decode(frase) {
 // Desafio 10
 function techList(array, string) {
   let arrayFinal = [];
+  array = array.sort();
+  if(array.length <= 0){
+    arrayFinal = 'Vazio!';
+  }
   for(let index = 0; index < array.length; index += 1){
     if(array.length > 0){
       arrayFinal[index] = {
           tech: array[index],
            name: string,
         }
-    }else if(array.length <= 0){
-      arrayFinal = 'Vazio!';
     }
   }
   return arrayFinal
 }
-// let array1 = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-// let string1 = 'Lucas';
-// console.log(techList(array1, string1));
+let array1 = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let string1 = 'Lucas';
+console.log(techList(array1, string1));
 
 module.exports = {
   calcArea,
