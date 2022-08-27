@@ -45,28 +45,15 @@ function generatePhoneNumber(numero) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(linha1, linha2, linha3) {
+  let qual = true;
+  if(linha1 < linha2 + linha3 && Math.abs(linha1) > Math.abs(linha2) - Math.abs(linha3) ) {
+    qual = true;
+  }else{
+    qual = false;
+  }
+  return qual
 }
 
 // Desafio 13
