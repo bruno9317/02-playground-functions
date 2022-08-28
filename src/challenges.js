@@ -89,41 +89,33 @@ function fizzBuzz(arrayNumber) {
 
 // Desafio 9
 function encode(frase) {
-  let frase2 = frase.split('', frase.length);
-  for (let index = 0; index < frase2.length; index += 1) {
-    if (frase2[index] === 'a') {
-      frase2[index] = '1';
-    } else if (frase2[index] === 'e') {
-      frase2[index] = '2';
-    } else if (frase2[index] === 'i') {
-      frase2[index] = '3';
-    } else if (frase2[index] === 'o') {
-      frase2[index] = '4';
-    } else if (frase2[index] === 'u') {
-      frase2[index] = '5';
+  frase = frase.split('', frase.length);
+  let vogal = ['a', 'e', 'i', 'o', 'u'];
+  let numeros = ['1', '2', '3', '4', '5'];
+  for (let index = 0; index < frase.length; index += 1) {
+    for (let index2 = 0; index2 < frase.length; index2 += 1) {
+      if (frase[index] === vogal[index2]) {
+        frase[index] = numeros[index2];
+      }
     }
   }
-  frase2 = frase2.join('');
-  return frase2;
+  frase = frase.join('');
+  return frase;
 }
 
 function decode(frase) {
-  let frase2 = frase.split('', frase.length);
-  for (let index = 0; index < frase2.length; index += 1) {
-    if (frase2[index] === '1') {
-      frase2[index] = 'a';
-    } else if (frase2[index] === '2') {
-      frase2[index] = 'e';
-    } else if (frase2[index] === '3') {
-      frase2[index] = 'i';
-    } else if (frase2[index] === '4') {
-      frase2[index] = 'o';
-    } else if (frase2[index] === '5') {
-      frase2[index] = 'u';
+  frase = frase.split('', frase.length);
+  let vogal = ['a', 'e', 'i', 'o', 'u'];
+  let numeros = ['1', '2', '3', '4', '5'];
+  for (let index = 0; index < frase.length; index += 1) {
+    for (let index2 = 0; index2 < frase.length; index2 += 1) {
+      if (frase[index] === numeros[index2]) {
+        frase[index] = vogal[index2];
+      }
     }
   }
-  frase2 = frase2.join('');
-  return frase2;
+  frase = frase.join('');
+  return frase;
 }
 
 // Desafio 10
@@ -143,9 +135,6 @@ function techList(array, string) {
   }
   return arrayFinal;
 }
-let array1 = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let string1 = 'Lucas';
-console.log(techList(array1, string1));
 
 module.exports = {
   calcArea,
