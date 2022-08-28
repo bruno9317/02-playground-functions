@@ -1,27 +1,26 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2 === true) {
-    return true
-  }{
-    return false
+    return true;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, altura) {
-  return (base * altura) /2
+  return (base * altura) / 2;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  contador = 0;
+  let contador = 0;
   for (let index = 0; index < frase.length; index += 1) {
-    if (frase[index] == ' ') {
-      contador = contador + 1;
+    if (frase[index] === ' ') {
+      contador += +1;
     }
   }
   let array = frase.split(' ', contador + 1);
-  return array
+  return array;
 }
 // Desafio 4
 function concatName(array) {
@@ -30,8 +29,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + (ties * 1)
-  return points 
+  let points = (wins * 3) + (ties * 1);
+  return points;
 }
 
 // Desafio 6
@@ -45,41 +44,39 @@ function highestCount(array) {
   }
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === maiorNumero) {
-      contador = contador + 1;
+      contador += +1;
     }
   }
-  return contador
+  return contador;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distancia1;
   let distancia2;
 
-  distancia1 =  cat1 - mouse;
-  distancia2 =  cat2 - mouse;
+  distancia1 = cat1 - mouse;
+  distancia2 = cat2 - mouse;
   if (distancia1 < 0) {
-    distancia1 = distancia1 * (-1);
+    distancia1 *= (-1);
   }
   if (distancia2 < 0) {
-    distancia2 = distancia2 * (-1);
+    distancia2 *= (-1);
   }
-  
   if (distancia1 < distancia2) {
-    return 'cat1'
-  } else if(distancia1 > distancia2) {
-    return 'cat2'
-  }{
-    return 'os gatos trombam e o rato foge'
+    return 'cat1';
+  } if (distancia1 > distancia2) {
+    return 'cat2';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let arrayString = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
-    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 != 0 ) {
+    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 !== 0 ) {
       arrayString.push('fizz');
-    } else if (arrayNumber[index] % 3 != 0 && arrayNumber[index] % 5 === 0) {
+    } else if (arrayNumber[index] % 3 !== 0 && arrayNumber[index] % 5 === 0) {
       arrayString.push('buzz');
     } else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
       arrayString.push('fizzBuzz');
@@ -87,7 +84,7 @@ function fizzBuzz(arrayNumber) {
       arrayString.push('bug!');
     }
   }
-  return arrayString
+  return arrayString;
 }
 
 // Desafio 9
@@ -108,13 +105,13 @@ function encode(frase) {
     }
   }
   frase2 = frase2.join('');
-  return frase2
+  return frase2;
 }
 
 function decode(frase) {
   let frase2 = frase.split("", frase.length);
   let stringFinal = '';
-  for (let index = 0; index < frase2.length; index +=1) {
+  for (let index = 0; index < frase2.length; index += 1) {
     if (frase2[index] === '1') {
       frase2[index] = 'a';
     } else if (frase2[index] === '2') {
@@ -128,7 +125,7 @@ function decode(frase) {
     }
   }
   frase2 = frase2.join('');
-  return frase2
+  return frase2;
 }
 
 // Desafio 10
@@ -141,12 +138,12 @@ function techList(array, string) {
   for (let index = 0; index < array.length; index += 1) {
     if (array.length > 0) {
       arrayFinal[index] = {
-          tech: array[index],
-           name: string,
-        }
+        tech: array[index],
+        name: string,
+      }
     }
   }
-  return arrayFinal
+  return arrayFinal;
 }
 let array1 = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 let string1 = 'Lucas';
