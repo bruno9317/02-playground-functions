@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumber) {
   let arrayString = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
-    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 !== 0 ) {
+    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 !== 0) {
       arrayString.push('fizz');
     } else if (arrayNumber[index] % 3 !== 0 && arrayNumber[index] % 5 === 0) {
       arrayString.push('buzz');
@@ -89,9 +89,8 @@ function fizzBuzz(arrayNumber) {
 
 // Desafio 9
 function encode(frase) {
-  let frase2 = frase.split("", frase.length);
-  let stringFinal = '';
-  for (let index = 0; index < frase2.length; index +=1) {
+  let frase2 = frase.split('', frase.length);
+  for (let index = 0; index < frase2.length; index += 1) {
     if (frase2[index] === 'a') {
       frase2[index] = '1';
     } else if (frase2[index] === 'e') {
@@ -109,8 +108,7 @@ function encode(frase) {
 }
 
 function decode(frase) {
-  let frase2 = frase.split("", frase.length);
-  let stringFinal = '';
+  let frase2 = frase.split('', frase.length);
   for (let index = 0; index < frase2.length; index += 1) {
     if (frase2[index] === '1') {
       frase2[index] = 'a';
@@ -140,7 +138,7 @@ function techList(array, string) {
       arrayFinal[index] = {
         tech: array[index],
         name: string,
-      }
+      };
     }
   }
   return arrayFinal;
