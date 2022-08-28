@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 && valor2 === true){
+  if (valor1 && valor2 === true) {
     return true
   }{
     return false
@@ -15,8 +15,8 @@ function calcArea(base, altura) {
 // Desafio 3
 function splitSentence(frase) {
   contador = 0;
-  for(let index = 0; index < frase.length; index += 1){
-    if(frase[index] == ' '){
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index] == ' ') {
       contador = contador + 1;
     }
   }
@@ -38,13 +38,13 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maiorNumero = array[0];
   let contador = 0;
-  for(let index = 1; index < array.length; index += 1){
-    if(array[index] > maiorNumero){
+  for (let index = 1; index < array.length; index += 1) {
+    if (array[index] > maiorNumero) {
       maiorNumero = array[index];
     }
   }
-  for(let index = 0; index < array.length; index += 1){
-    if(array[index] === maiorNumero){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === maiorNumero) {
       contador = contador + 1;
     }
   }
@@ -57,16 +57,16 @@ function catAndMouse(mouse, cat1, cat2) {
 
   distancia1 =  cat1 - mouse;
   distancia2 =  cat2 - mouse;
-  if(distancia1 < 0){
+  if (distancia1 < 0) {
     distancia1 = distancia1 * (-1);
   }
-  if(distancia2 < 0){
+  if (distancia2 < 0) {
     distancia2 = distancia2 * (-1);
   }
   
-  if(distancia1 < distancia2){
+  if (distancia1 < distancia2) {
     return 'cat1'
-  }else if(distancia1 > distancia2){
+  } else if(distancia1 > distancia2) {
     return 'cat2'
   }{
     return 'os gatos trombam e o rato foge'
@@ -76,14 +76,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let arrayString = [];
-  for(let index = 0; index < arrayNumber.length; index += 1){
-    if(arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 != 0 ){
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 != 0 ) {
       arrayString.push('fizz');
-    }else if(arrayNumber[index] % 3 != 0 && arrayNumber[index] % 5 === 0){
+    } else if (arrayNumber[index] % 3 != 0 && arrayNumber[index] % 5 === 0) {
       arrayString.push('buzz');
-    }else if(arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0){
+    } else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
       arrayString.push('fizzBuzz');
-    }else{
+    } else {
       arrayString.push('bug!');
     }
   }
@@ -94,16 +94,16 @@ function fizzBuzz(arrayNumber) {
 function encode(frase) {
   let frase2 = frase.split("", frase.length);
   let stringFinal = '';
-  for(let index = 0; index < frase2.length; index +=1){
-    if(frase2[index] === 'a'){
+  for (let index = 0; index < frase2.length; index +=1) {
+    if (frase2[index] === 'a') {
       frase2[index] = '1';
-    }else if(frase2[index] === 'e'){
+    } else if (frase2[index] === 'e') {
       frase2[index] = '2';
-    }else if(frase2[index] === 'i'){
+    } else if (frase2[index] === 'i') {
       frase2[index] = '3';
-    }else if(frase2[index] === 'o'){
+    } else if (frase2[index] === 'o') {
       frase2[index] = '4';
-    }else if(frase2[index] === 'u'){
+    } else if (frase2[index] === 'u') {
       frase2[index] = '5';
     }
   }
@@ -114,16 +114,16 @@ function encode(frase) {
 function decode(frase) {
   let frase2 = frase.split("", frase.length);
   let stringFinal = '';
-  for(let index = 0; index < frase2.length; index +=1){
-    if(frase2[index] === '1'){
+  for (let index = 0; index < frase2.length; index +=1) {
+    if (frase2[index] === '1') {
       frase2[index] = 'a';
-    }else if(frase2[index] === '2'){
+    } else if (frase2[index] === '2') {
       frase2[index] = 'e';
-    }else if(frase2[index] === '3'){
+    } else if (frase2[index] === '3') {
       frase2[index] = 'i';
-    }else if(frase2[index] === '4'){
+    } else if (frase2[index] === '4') {
       frase2[index] = 'o';
-    }else if(frase2[index] === '5'){
+    } else if (frase2[index] === '5') {
       frase2[index] = 'u';
     }
   }
@@ -135,11 +135,11 @@ function decode(frase) {
 function techList(array, string) {
   let arrayFinal = [];
   array = array.sort();
-  if(array.length <= 0){
+  if (array.length <= 0) {
     arrayFinal = 'Vazio!';
   }
-  for(let index = 0; index < array.length; index += 1){
-    if(array.length > 0){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array.length > 0) {
       arrayFinal[index] = {
           tech: array[index],
            name: string,
